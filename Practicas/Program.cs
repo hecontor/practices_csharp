@@ -3,9 +3,9 @@ namespace Practices {
     public class Program{
        static KataNextBiggerNumber test = new KataNextBiggerNumber();
         public static void Main(string[] args){
-            // test.NextBiggerNumber(args);
-            int valor = new codewars.KataNextBiggerNumber().NextBiggerNumber(["1","2","3"]);
-            Console.WriteLine(valor);
+           Console.WriteLine("next bigger number : " + new KataNextBiggerNumber().NextBiggerNumberChatGpt(123456775));
         }
     }
 }
+//123456775
+//123457567
