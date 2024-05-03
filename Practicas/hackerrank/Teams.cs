@@ -38,5 +38,31 @@ namespace Practicas.hackerrank
         {
             this.teamName = name;
         }
+
+        public static string AppendAndDelete(string s, string t, int k)
+        {
+            int commonLength = 0;
+            int minLength = Math.Min(s.Length, t.Length);
+
+            for (int i = 0; i < minLength; i++)
+            {
+                if (s[i] == t[i])
+                    commonLength++;
+                else
+                    break;
+            }
+
+            int minOperations = (s.Length - commonLength) + (t.Length - commonLength);
+
+
+            if (minOperations <= k && (k - minOperations) % 2 == 0 || s.Length + t.Length <= k)
+            {
+                return "Yes";
+            }
+            else
+            {
+                return "No";
+            }
+        }
     }
 }
